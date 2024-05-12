@@ -1,5 +1,6 @@
 package br.com.alura.gerafrase.controller;
 
+import br.com.alura.gerafrase.dto.FraseDTO;
 import br.com.alura.gerafrase.model.Frase;
 import br.com.alura.gerafrase.service.FraseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class FraseController {
     private FraseService fraseService;
 
     @GetMapping("")
-    public List<Frase> getFrases() {
-        return fraseService.getAll();
+    public FraseDTO getFrases() {
+        return fraseService.getRandom();
     }
 }
